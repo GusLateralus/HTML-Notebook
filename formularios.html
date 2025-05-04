@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formularios en HTML</title>
+</head>
+<body>
+    <h1>¿Qué son los formularios?</h1>
+    <p>Los formularios son uno de los principales puntos de interacción entre usuario y una página web
+        o aplicación.
+    </p>
+    <br>
+    <p>Su principal función es permitir a los usuarios el ingreso de datos
+        y que la aplicación de pueda trabajar con los mismos, sea por ejemplo, para
+        guardar dicha información en una base de datos, utilizarla en una búsqueda
+        o simplemente realizar cambios en la GUI a partir de la selección del usuario.
+    </p>
+    <br>
+    <p>Las etiquetas básicas que puede contener un formulario son:</p>
+    <ul>
+        <li><strong>&lt;form&gt; &lt;/form&gt;:</strong> apertura y cierre de formulario 
+            <ul><li><b>action:</b> permite indicar la acción que realizará el formulario cuando se quiera enviar</li>
+                <li><b>method:</b> indica el método mediante el cual se enviará el formulario (ej: POST)</li>
+            </ul>
+        </li>
+
+        <li><strong>&lt;label&gt; &lt;/label&gt;:</strong> Apertura y cierre para una etiqueta de un elemento dentro del
+            formulario, en otras palabras, el texto que se lleva al frente
+
+            <ul><li><b>for:</b> se utiliza para indicar a qué input hará referencia la etiqueta </li></ul>
+        </li>
+
+        <li><strong>&lt;input&gt; &lt;/input&gt;:</strong> Se utiliza para permitir cuadros de texto donde el usuario ingrese datos.
+            Algunos complementos de esto son: 
+            <ul><li><b>type:</b> permite indicar el tipo de entrada que permitiremos, por ejemplo: email, text, password, etc.</li>
+                <li><b>id:</b> permite asignar una id (identificación/nombre) que sea única para cada input</li>
+            </ul>
+        </li>
+
+        <li><strong>&lt;textarea&gt; &lt;/textarea&gt;:</strong> Se utiliza para cuadros grandes de texto, como los típicos de observaciones
+            <ul>
+                <li><b>id:</b> permite asignar una id (identificación/nombre) que sea única para cada textarea</li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <h2><b>Ejemplo de formulario</b></h2>
+    <!--Aquí empezamos la creación del formulario:-->
+    <form action="otroHTML.html" method="post">
+        <p><label for="nombre:">Nombre: <input type="text" id="nombre"></label></p>
+        <p><label for="apellido">Apellido: <input type="text" id="apellido"></label></p>
+        <p><label for="edad:">Edad: <input type="text" id="edad"></label></p>
+        <p><label for="observaciones">Observaciones <textarea id="observaciones"></textarea></label></p>
+        <!-- Aquí prácticamente se crean los combobox-->
+         <!--
+        selected: sirve para poner esa opción por default
+        disabled: sirve para desactivar la opción.
+
+
+        &lt; menor que
+        &gt; mayor que
+         -->
+        <p><label> Estatura: </label></p>
+            <select id="estatura">
+                <option value="&lt; 1.50 m">&lt; 1.50 m</option>
+                <option value="1.51 a 1.60 m">1.51 m a 1.60 m</option>
+                <option value="1.61 a 1.70 m" selected>1.61 m a 1.70 m</option>
+                <option value="1.71m a 1.80 m">1.71 m a 1.80 m</option>
+                <option value="&gt; 1.80 m">&gt; 1.80 m</option>
+            </select>
+        <br>
+
+        <p><label for="">Color de ojos:</label></p>
+        <input type="checkbox" value="marron"> <!-- detrás de escena, viaja la palabra marron, y lo que ve el usuario es Marrón-->
+            <label>Marrón</label> <br>
+        <input type="checkbox" value="verde"><!--si pones type="radio" creas puros radiobutton-->
+            <label>Verde</label> <br>
+        <input type="checkbox" value="azul">
+            <label>Azul</label> <br>
+        <input type="checkbox" value="otro">
+            <label>Otro</label> <br>
+        
+        
+        <br>
+
+        <!-- Creamos un botón de enviar-->
+        <button type="submit">Enviar</button>
+        
+        
+
+
+    </form>
+
+
+
+
+</body>
+</html>
