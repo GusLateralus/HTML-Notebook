@@ -36,6 +36,16 @@ li{
     display: block;
 }
 
+#titulo-pseudoclases{
+    color:cornflowerblue
+
+
+}
 
 
 
+a:active{
+    background-color: yellow;
+    color: red;
+
+}
